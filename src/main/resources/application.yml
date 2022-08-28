@@ -1,0 +1,15 @@
+spring:
+  main:
+    banner-mode: off
+  sql:
+    init:
+      platform: hsqldb
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: hsqldb
+    url: jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driverClassName: org.hsqldb.jdbc.JDBCDriver
