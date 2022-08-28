@@ -1,5 +1,5 @@
 # server-logs-processor - (Large File Processing Example Project)
-This is a sample Java / Maven / Spring Boot application that can be used to demo large file processing example and much more. I hope it helps you.
+This is a sample Java / Maven / Spring Boot application that can be used to show demo of large file processing and much more. I hope it helps you.
 
 ## How to Run
 
@@ -23,5 +23,5 @@ This application is packaged as a war which has Tomcat 8 embedded. No Tomcat or 
 - Once successfully built, you can run the service by one of these two methods:
 
         java -jar -Dspring.profiles.active=dev target/server-logs-processor.jar
-or
+        or
         mvn spring-boot:run -Drun.arguments="spring.profiles.active=dev"
