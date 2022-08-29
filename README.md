@@ -19,13 +19,16 @@ This is a sample Java / Maven / Spring Boot application that can be used to show
 - You are all Set
 
 ### Using command line :
-This application is packaged as a war which has Tomcat 8 embedded. No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
+This application is packaged as a jar. It is spring boot applicationn still No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
 
 - Clone this repository
 - Make sure you are using JDK 1.8 and Maven 3.x
-- You can build the project and run the tests by running mvn clean package
+- You can build the project and run the tests by running mvn commands
+   -  mvn clean
+   -  mvn compile
+   -  mvn install
 - Once successfully built, you can run the service by one of these two methods:
 
-        java -jar -Dspring.profiles.active=dev target/server-logs-processor.jar
+        java -jar -Dspring.profiles.active=dev target/server-logs-processor-0.0.1-SNAPSHOT.jar --file.path=<absolute file path>/logFile.txt
         or
-        mvn spring-boot:run -Drun.arguments="spring.profiles.active=dev"
+        mvn spring-boot:run -Drun.arguments="spring.profiles.active=dev,file.path=<absolute file path>/logFile.txt"
