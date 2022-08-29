@@ -10,12 +10,11 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
+
 @Slf4j
 @SpringBootApplication
 public class ServerLogsProcessorApplication implements ApplicationRunner {
-
-	@Value("${file.path}")
-	private String filePath;
 
 	@Autowired
 	LogFileReaderService logFileReaderService;
@@ -26,6 +25,14 @@ public class ServerLogsProcessorApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args)  {
+
+		String filePath = null;
+		for (String name : args.getOptionNames()){
+			log.info("argument is -> " + name + "=" + args.getOptionValues(name));
+			if(name != null && name.trim().equals("file.path")){
+				filePath = args.getOptionValues(name).get(0);
+			}
+		}
 		if(filePath == null || filePath.equals("")){
 			log.info("No file available for processing....");
 		}else{
