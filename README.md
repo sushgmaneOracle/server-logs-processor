@@ -7,10 +7,14 @@ This is a sample Java / Maven / Spring Boot application that can be used to show
 - Download the zip or clone the Git repository.
 - Unzip the zip file (if you downloaded one)
 - Open Command Prompt and Change directory (cd) to folder containing pom.xml
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
+- Open intellij 
+   - File -> Open -> Navigate to the folder where you unzipped the zip
    - Select the right project
-- Choose the Spring Boot Application file (search for @SpringBootApplication)
+- Select 'Open in new window'
+- Configure Application and "Environment variables" as shown in below :
+
+  ![image](https://user-images.githubusercontent.com/50489831/187118567-1f03b575-6d03-4645-9d88-27e17bd0aed1.png)
+
 - Right Click on the file and Run as Java Application
 - You are all Set
 
